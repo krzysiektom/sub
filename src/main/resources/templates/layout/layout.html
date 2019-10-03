@@ -1,0 +1,13 @@
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.w3.org/1999/xhtml">
+    <head>
+        <th:block th:replace="layout/partials/header"></th:block>
+    </head>
+    <body>
+        <th:block th:replace="layout/partials/nav"></th:block>
+        <div th:classappend="pt-xl-2">
+            <div layout:fragment="content"/>
+        </div>
+
+        <th:block th:replace="layout/partials/footer"></th:block>
+    </body>
+</html>
