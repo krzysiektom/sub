@@ -1,0 +1,30 @@
+<th:block th:fragment="form-input-text" xmlns:th="http://www.thymeleaf.org">
+    <label th:for="${name}">[[${label}]]</label>
+    <th:block th:if="${value}">
+        <input type="text" class="form-control" th:field="*{__${name}__}" th:value="${value}" th:autofocus="${autofocus}">
+    </th:block>
+    <th:block th:unless="${value}">
+        <input type="text" class="form-control" th:field="*{__${name}__}" th:placeholder="${label}" th:autofocus="${autofocus}">
+    </th:block>
+
+
+
+
+</th:block>
+
+<!--<th:block th:fragment="form-multi-check" xmlns:th="http://www.thymeleaf.org">-->
+<!--    <div class="row">[[${label}]]</div>-->
+<!--    <div class="row" th:each="checkboxValue:${multiCheckboxAllValues}" th:with="seqName=${#ids.prev('multiCheckboxSelectedValues')}">-->
+<!--        <div class="form-check">-->
+<!--            <input class="form-check-input" type="checkbox" th:id="${seqName}">-->
+<!--            <label class="form-check-label" th:for="${seqName}" th:text="#{${prefix+'_'+}"></label>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</th:block>-->
+<!--<ul>-->
+<!--    <li th:each="feat : ${allFeatures}">-->
+<!--        <input type="checkbox" th:field="*{features}" th:value="${feat}" />-->
+<!--        <label th:for="${#ids.prev('features')}"-->
+<!--               th:text="#{${'seedstarter.feature.' + feat}}">Heating</label>-->
+<!--    </li>-->
+<!--</ul>-->

@@ -4,12 +4,31 @@
 
     <!-- Page Content -->
     <div class="container" id="homePage">
-        <h1>Welcome Home with layout</h1>
-        <div class="container"><br/>
-            <div class="alert alert-success">
-                <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
-                <strong>Success!</strong> It is working as we expected.
-            </div>
+        <div class="row mb-2">
+            <div th:replace="card::card(
+            cardTitle='Lista substytucji',
+            cardText='Lista aktywnych substytucji.',
+            href='/substitute/',
+            class='list',
+            hrefName='Lista',
+            active=true)"></div>
+
+            <div th:replace="card::card(
+            cardTitle='Dodaj substytucję',
+            cardText='Formularz dodawania substytucji.',
+            href='/substitute/create/',
+            class='plus',
+            hrefName='Dodaj',
+            active=false)"></div>
+        </div>
+        <div class="row mb-2">
+            <div th:replace="card::card(
+            cardTitle='Moje substytucje',
+            cardText='Przegląd zleceniobiorców i akceptacja.',
+            href='/mySubstitutes/',
+            class='user-check',
+            hrefName='Przejdź',
+            active=false)"></div>
         </div>
     </div>
 
