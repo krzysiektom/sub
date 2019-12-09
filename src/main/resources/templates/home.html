@@ -5,7 +5,7 @@
     <!-- Page Content -->
     <div class="container" id="homePage">
         <div class="row mb-2">
-            <div th:replace="card::card(
+            <div th:replace="fragments/card::card(
             cardTitle='Lista substytucji',
             cardText='Lista aktywnych substytucji.',
             href='/substitute/',
@@ -13,7 +13,7 @@
             hrefName='Lista',
             active=true)"></div>
 
-            <div th:replace="card::card(
+            <div th:replace="fragments/card::card(
             cardTitle='Dodaj substytucję',
             cardText='Formularz dodawania substytucji.',
             href='/substitute/create/',
@@ -22,7 +22,7 @@
             active=false)"></div>
         </div>
         <div class="row mb-2">
-            <div th:replace="card::card(
+            <div th:replace="fragments/card::card(
             cardTitle='Moje substytucje',
             cardText='Przegląd zleceniobiorców i akceptacja.',
             href='/mySubstitutes/',

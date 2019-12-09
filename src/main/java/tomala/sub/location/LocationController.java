@@ -60,9 +60,15 @@ public class LocationController {
     }
 
     @ResponseBody
-    @GetMapping("/rest/all")
+    @GetMapping("/rest/")
     public List<Location> allRESTLocation() {
         return locationRepository.findAll();
+    }
+
+    @ResponseBody
+    @GetMapping("/rest/{id}")
+    public Location RESTLocationById(@PathVariable Long id) {
+        return locationRepository.getOne(id);
     }
 
 }

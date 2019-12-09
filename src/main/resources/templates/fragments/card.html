@@ -1,14 +1,11 @@
 <div class="col-sm-6" th:fragment="card" xmlns:th="http://www.thymeleaf.org">
     <div class="card">
+        <div class="card-header" th:text="${activityType}"></div>
         <div class="card-body">
-            <h5 class="card-title" th:text="${cardTitle}"></h5>
-            <p class="card-text" th:text="${cardText}"></p>
-<!--            <a th:if="${active}" th:href="@{${href}}" class="btn btn-primary"><i th:class="'fas fa-'+${class}+' mr-1'"></i>[[${hrefName}]]</a>-->
+            <div class="card-title" th:text="${positionType}"></div>
+            <div class="card-text" th:text="${info}"></div>
+            <!--            <a th:if="${active}" th:href="@{${href}}" class="btn btn-primary"><i th:class="'fas fa-'+${class}+' mr-1'"></i>[[${hrefName}]]</a>-->
             <a th:href="@{${href}}" class="btn btn-primary"><i th:class="'fas fa-'+${class}+' mr-1'"></i>[[${hrefName}]]</a>
         </div>
-        <div th:unless="${active}" class="card-footer text-muted">
-            Akcja dostępna po zalogowaniu
-        </div>
-
     </div>
 </div>

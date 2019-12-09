@@ -2,6 +2,7 @@ package tomala.sub.location;
 
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 @Entity
 @Table(name = "substituteLocations")
